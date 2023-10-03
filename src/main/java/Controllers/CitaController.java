@@ -14,11 +14,12 @@ public class CitaController {
     @Autowired
     CitaService cita;
 
-    @CrossOrigin
     @GetMapping(value="/Todas", produces = {MediaType.APPLICATION_JSON_VALUE})
+    @CrossOrigin
     public ArrayList<Cita> getAll(){
 
         System.out.println("HOLAAAAAAAAAA");
         return cita.SearchAll();
     }
+
 }
