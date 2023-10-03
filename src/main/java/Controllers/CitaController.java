@@ -1,3 +1,5 @@
+package Controllers;
+
 import Entities.Cita;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -12,8 +14,11 @@ public class CitaController {
     @Autowired
     CitaService cita;
 
+    @CrossOrigin
     @GetMapping(value="/Todas", produces = {MediaType.APPLICATION_JSON_VALUE})
     public ArrayList<Cita> getAll(){
+
+        System.out.println("HOLAAAAAAAAAA");
         return cita.SearchAll();
     }
 }

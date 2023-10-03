@@ -10,8 +10,8 @@ import java.math.BigInteger;
 @Data
 public class Cita implements Serializable{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id_city;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id_cita;
 
     private String nombre;
 
