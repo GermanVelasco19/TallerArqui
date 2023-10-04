@@ -5,7 +5,9 @@ import taller.tallerMicroServicios.Repositories.CitaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Objects;
 
 @Service
 public class CitaService {
@@ -21,11 +23,11 @@ public class CitaService {
         Repo.save(c);
     }
 
-    public void updateCity(Cita c){
+    public void updateCita(Cita c){
         Repo.save(c);
     }
 
-    public void deleteCity(Integer ID){
+    public void deleteCita(Integer ID){
         Repo.deleteById(ID);
     }
 
@@ -35,6 +37,21 @@ public class CitaService {
         }else{
             return null;
         }
+    }
+
+    public ArrayList<Cita> findByCedula(BigInteger ID){
+        ArrayList<Cita> citas;
+        ArrayList<Cita> rta = new ArrayList<>();
+
+        citas = this.SearchAll();
+
+        for (int i =0;i<citas.size();i++){
+            if (Objects.equals(citas.get(i).getCedula(), ID)){
+                rta.add(i,citas.get(i));
+            }
+        }
+        return rta;
+
     }
 
 }
