@@ -1,7 +1,7 @@
-package services;
+package taller.tallerMicroServicios.services;
 
-import Entities.Cita;
-import Repositories.CitaRepository;
+import taller.tallerMicroServicios.Entities.Cita;
+import taller.tallerMicroServicios.Repositories.CitaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

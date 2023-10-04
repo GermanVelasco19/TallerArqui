@@ -1,4 +1,4 @@
-package Entities;
+package taller.tallerMicroServicios.Entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
